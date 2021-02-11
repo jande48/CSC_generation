@@ -1,6 +1,6 @@
 // This function is a solution the problem at https://bitbucket.org/dbuy/workspace/snippets/rnB4an
 // developed by Jacob Anderson on 2/11/2020
-// 
+
 
 module.exports = function sortCategoriesForInsert (inputJson) {
 
