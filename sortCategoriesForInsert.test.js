@@ -43,7 +43,11 @@ const input = [
     },
 ];
 
-const output = sortCategoriesForInsert(input);
+const output = JSON.parse(
+  sortCategoriesForInsert(
+    JSON.stringify(input)
+  )
+);
 console.log(output);
 
 const inserted = {};

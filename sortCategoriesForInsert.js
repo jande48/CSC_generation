@@ -1,14 +1,15 @@
 module.exports = function sortCategoriesForInsert (inputJson) {
+  const input = JSON.parse(inputJson);
   const hashArr = {};
-  for (let i = 0; i < inputJson.length; i++) {
-    const item = inputJson[i];
+  for (let i = 0; i < input.length; i++) {
+    const item = input[i];
     if (hashArr[item.parent_id] == null) hashArr[item.parent_id] = [];
     hashArr[item.parent_id].push(item);
   }
 
   const properJsonOutput = hierarchySort(hashArr, null, []);
 
-  return properJsonOutput;
+  return JSON.stringify(properJsonOutput);
 }
 
 function hierarchySort (hashArr, key, result) {
