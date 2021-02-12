@@ -1,4 +1,4 @@
-var result = require('./sortCategoriesForInsert.js')
+var result = require('./sortCategoriesForInsert.js');
 
 var arr = [
     {
@@ -41,6 +41,6 @@ var arr = [
         "id": 33,
         "parent_id": 99,
       },
-  ]
+  ];
 
-console.log(result(arr))
+console.log(result(arr));
