@@ -7,7 +7,7 @@ My solution to [this interview problem](https://bitbucket.org/dbuy/workspace/sni
 [view on GitHub](https://github.com/jande48/CSC_generation)
 
 ## Reasoning
-Since this data is hierarchical, my approach is to create a hash array to group data with the same parents, then write a recursive function to push child data only after its parents have been added.
+Since the taxonomy for categories can be arbitrarily deep, I chose a non-recursive approach that classifies each category as insertable or awaiting its parent's insertion and updates these running lists at every step of the iteration so that as soon as a parent is inserted, all the children that were waiting get inserted as well.
 
 ## Contact
 **Jacob Anderson**
