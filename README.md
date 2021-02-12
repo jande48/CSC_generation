@@ -2,8 +2,6 @@
 
 My solution to [this interview problem](https://bitbucket.org/dbuy/workspace/snippets/rnB4an).
 
-*developed by Jacob Anderson on 2/11/2020*
-
 [view on GitHub](https://github.com/jande48/CSC_generation)
 
 ## Reasoning
