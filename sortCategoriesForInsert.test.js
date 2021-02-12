@@ -1,6 +1,6 @@
-const result = require("./sortCategoriesForInsert.js");
+const sortCategoriesForInsert = require("./sortCategoriesForInsert.js");
 
-const arr = [
+const input = [
   {
       "name": "Accessories",
       "id": 1,
@@ -43,4 +43,4 @@ const arr = [
     },
 ];
 
-console.log(result(arr));
+console.log(sortCategoriesForInsert(input));
