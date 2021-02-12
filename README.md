@@ -9,9 +9,6 @@ My solution to [this interview problem](https://bitbucket.org/dbuy/workspace/sni
 ## Reasoning
 Since this data is hierarchical, my approach is to create a hash array to group data with the same parents, then write a recursive function to push child data only after its parents have been added.
 
-I chose this method, because even though the initial JSON data may have 10,000+ objects, my assumption is that the number of categories (parent-child relationships), could be
-much, much less and therefore reduce the recursive calls.
-
 ## Contact
 **Jacob Anderson**
 - [jacob.anderson10@gmail.com](mailto:jacob.anderson10@gmail.com)
