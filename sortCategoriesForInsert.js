@@ -1,8 +1,7 @@
 module.exports = function sortCategoriesForInsert (inputJson) {
-  const arr = inputJson;
   const hashArr = {};
-  for (let i = 0; i < arr.length; i++) {
-    const item = arr[i];
+  for (let i = 0; i < inputJson.length; i++) {
+    const item = inputJson[i];
     if (hashArr[item.parent_id] == null) hashArr[item.parent_id] = [];
     hashArr[item.parent_id].push(item);
   }
