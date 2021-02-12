@@ -3,8 +3,8 @@ module.exports = function sortCategoriesForInsert (inputJson) {
   var arr = inputJson;
   var hashArr = {};
   for (var i = 0; i < arr.length; i++) {
-      if (hashArr[arr[i].parent_id] == null) hashArr[arr[i].parent_id] = [];
-      hashArr[arr[i].parent_id].push(arr[i]);
+    if (hashArr[arr[i].parent_id] == null) hashArr[arr[i].parent_id] = [];
+    hashArr[arr[i].parent_id].push(arr[i]);
   }
 
   var properJsonOutput = hierarchySort(hashArr, null, []);
