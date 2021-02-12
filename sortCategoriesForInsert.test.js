@@ -53,16 +53,16 @@ console.log(output);
 const inserted = {};
 for (let i = 0; i < output.length; i++) {
   const item = output[i];
-  const parentId = item['parent_id'];
+  const parentId = item["parent_id"];
   if (parentId) {
-    assert(inserted[parentId], 'Trying to insert child before parent');
+    assert(inserted[parentId], "Trying to insert child before parent");
   }
-  inserted[item.id] = true
+  inserted[item.id] = true;
 }
-console.log('TEST PASSES')
+console.log("TEST PASSES");
 
 function assert (pass, str) {
   if (!pass) {
-    throw new Error(str)
+    throw new Error(str);
   }
 }
