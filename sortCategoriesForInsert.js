@@ -2,8 +2,9 @@ module.exports = function sortCategoriesForInsert (inputJson) {
   const arr = inputJson;
   const hashArr = {};
   for (let i = 0; i < arr.length; i++) {
-    if (hashArr[arr[i].parent_id] == null) hashArr[arr[i].parent_id] = [];
-    hashArr[arr[i].parent_id].push(arr[i]);
+    const item = arr[i];
+    if (hashArr[item.parent_id] == null) hashArr[item.parent_id] = [];
+    hashArr[item.parent_id].push(item);
   }
 
   const properJsonOutput = hierarchySort(hashArr, null, []);
