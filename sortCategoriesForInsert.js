@@ -13,20 +13,21 @@ module.exports = function sortCategoriesForInsert (inputJson) {
   }
 
   // Once the data is grouped by parent, a recursive function is called to push all of the children to a 'result' array once their parents have aleady been added.
-  function hierarhySort(hashArr, key, result) {
-
-    // check to see if there are any children
-    if (hashArr[key] == undefined) return;
-
-    // separate out the array that have the same parents
-    var arrOfParents = hashArr[key];
-    for (var i=0; i<arrOfParents.length; i++){
-      result.push(arrOfParents[i]);
-      hierarhySort(hashArr, arrOfParents[i]["id"], result)
-    }
-
-    return result
-  }
   var properJsonOutput = hierarhySort(hashArr, null, []);
   return properJsonOutput
+}
+
+function hierarhySort(hashArr, key, result) {
+
+  // check to see if there are any children
+  if (hashArr[key] == undefined) return;
+
+  // separate out the array that have the same parents
+  var arrOfParents = hashArr[key];
+  for (var i=0; i<arrOfParents.length; i++){
+    result.push(arrOfParents[i]);
+    hierarhySort(hashArr, arrOfParents[i]["id"], result)
+  }
+
+  return result
 }
