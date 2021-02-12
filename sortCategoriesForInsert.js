@@ -1,5 +1,4 @@
 module.exports = function sortCategoriesForInsert (inputJson) {
-
   var arr = inputJson;
   var hashArr = {};
   for (var i = 0; i < arr.length; i++) {
@@ -8,11 +7,11 @@ module.exports = function sortCategoriesForInsert (inputJson) {
   }
 
   var properJsonOutput = hierarchySort(hashArr, null, []);
+
   return properJsonOutput;
 }
 
 function hierarchySort (hashArr, key, result) {
-
   // check to see if there are any children
   if (hashArr[key] == undefined) return;
 
