@@ -1,6 +1,6 @@
-var result = require("./sortCategoriesForInsert.js");
+const result = require("./sortCategoriesForInsert.js");
 
-var arr = [
+const arr = [
   {
       "name": "Accessories",
       "id": 1,
